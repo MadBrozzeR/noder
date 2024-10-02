@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DIR=`pwd`
+
+ln -sfh "$DIR/$1" "$DIR/current"
