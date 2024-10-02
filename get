@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ROOT="https://nodejs.org/download/"
+
+RESULT=`curl $ROOT/$1 | sed -nE 's/.+href="(.+)".+/\1/p'`
+
+for row in $RESULT
+do
+  echo $1$row
+done
